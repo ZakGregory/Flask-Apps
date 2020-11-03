@@ -1,14 +1,17 @@
+from flask import render_template
 from application import app, db
 from application.models import Tasks
 
 @app.route('/')
 def home():
     all_tasks=Tasks.query.all()
+    return render_template('home.html', all_tasks=all_tasks)
+'''
     all_tasks_list=""
     for tasks in all_tasks:
         all_tasks_list+="<br>" + tasks.name
     return all_tasks_list   
-
+'''
 
 @app.route('/add/<newtask>')
 def add(newtask):
