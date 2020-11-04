@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% block body_content %}
+
+{% for tasks in all_tasks %}
+{{ tasks.name }}
+{% if tasks.complete %}
+&#9989
+{% endif %}
+<br>
+{% endfor %}
+{% endblock body_content %}
