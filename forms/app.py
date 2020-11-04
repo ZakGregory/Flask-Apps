@@ -1,6 +1,6 @@
-from flask import Flask
-from flask_wtf import Flaskform
-from wtf import StringField, SubmitField
+from flask import Flask, render_template, request
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
 
 app= Flask(__name__)
 
